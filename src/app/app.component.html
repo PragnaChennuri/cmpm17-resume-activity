@@ -1,8 +1,32 @@
 Welcome!
+<div class="resume-container">
 <!-- Go ahead and add your name -->
+  <h1>{{currentUserName}}</h1>
 <!-- Add a picture of yourself -->
+  <img src="images/pp.png"/>
 
 <!-- Include leadership positions, skills, or any other sections you
  would like to add to your online resume-->
+  <h3>Leadership Positions</h3>
 <!-- use list element if you are adding multiple things under each section
  such as Leadership, Skills -->
+  <ul>
+    <li>C++</li>
+    <li>Angular</li>
+    <li>TypeScript</li>
+    <li>Python</li>
+    <li>ChatGpt</li>
+  </ul>
+
+  <div class="class1">
+    <div class="class2">
+        hello
+    </div>
+  </div>
+
+  <div class="greeting-comp"> {{greeting}}, {{currentUserName}} </div>
+
+  @if (greeting === 'Good Morning'){
+    <div class="date-time-comp">09/{{prevYear}} - 09/{{newYear}}</div>
+  }
+</div>

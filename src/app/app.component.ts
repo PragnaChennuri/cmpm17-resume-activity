@@ -9,4 +9,15 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'cmpm17-resume-activity';
+
+  currentUserName: string = 'Pragna'
+
+  greeting: string = 'Good Evening';
+
+  prevYear: number = 2025;
+  newYear: number = 2026;
+
+  isGoodMorning(): boolean {
+    return this.greeting === 'Good Morning';
+  };
 }
