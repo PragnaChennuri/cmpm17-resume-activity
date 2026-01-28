@@ -1,3 +1,36 @@
 // Style your resume as you wish but make sure to choose a background color other than white
 // Change the color of any section
 // Change the font size of any section
+.container {
+  height: 100%;
+  width: 100vw;
+  background-color: rgb(7, 7, 7);
+  padding-left: 8%;
+  display: flex;
+  flex-direction: row;
+  .resume-container {
+    width: 500px;
+    height: 600px;
+    background-color: aqua;
+
+    img {
+      transform: scale(0.7)
+    }
+
+    p {
+     font-size: 15px;
+    }
+
+    .skills {
+      background-color: rgba(141, 133, 230, 0.8);
+      color: white;
+    }
+  }
+
+  .working-experience {
+    background-color: bisque;
+    height: 100%;
+    width: 50%;
+  }
+}
+

@@ -1,8 +1,30 @@
-Welcome!
 <!-- Go ahead and add your name -->
-<!-- Add a picture of yourself -->
+<div class="container">
+  <div class="resume-container">
+    <h1> {{ name }}</h1>
+    <!-- Add a picture of yourself -->
+    <img src="images/jialai.png">
 
-<!-- Include leadership positions, skills, or any other sections you
- would like to add to your online resume-->
-<!-- use list element if you are adding multiple things under each section
- such as Leadership, Skills -->
+    <!-- Include leadership positions, skills, or any other sections you
+    would like to add to your online resume-->
+    <h3> Leadership Position </h3>
+    <p> My lovely life</p>
+    <!-- use list element if you are adding multiple things under each section
+    such as Leadership, Skills -->
+    <ul class="skills">
+      @for (skill of skills; track $index) {
+        <li> {{ skill }}</li>
+      }
+    </ul>
+  </div>
+  <div class ="working-experience">
+    <h1> My Working Experience</h1>
+    <h2 (click)="changeName() "> {{ workingExperience()?.name }} </h2>
+    <p> {{ workingExperience()?.organization }}, {{ workingExperience()?.employmentType }}</p>
+    <ol>
+      @for (description of workingExperience()?.descriptions; track $index) {
+        <li>{{ description }} </li>
+      }
+    </ol>
+  </div>
+</div>
