@@ -4,7 +4,6 @@
     <h1> {{ name }}</h1>
     <!-- Add a picture of yourself -->
     <img src="images/jialai.png">
-
     <!-- Include leadership positions, skills, or any other sections you
     would like to add to your online resume-->
     <h3> Leadership Position </h3>
@@ -17,14 +16,17 @@
       }
     </ul>
   </div>
-  <div class ="working-experience">
-    <h1> My Working Experience</h1>
-    <h2 (click)="changeName() "> {{ workingExperience()?.name }} </h2>
-    <p> {{ workingExperience()?.organization }}, {{ workingExperience()?.employmentType }}</p>
-    <ol>
-      @for (description of workingExperience()?.descriptions; track $index) {
-        <li>{{ description }} </li>
-      }
-    </ol>
+  <div class="working-experience">
+    <h1>Working Experience</h1>
+    <h2 (click)="changeStudent()"> {{ myExperience()?.name }}</h2>
+    <h3> {{ myExperience()?.positionTitle }}, {{ myExperience()?.organization }} </h3>
+    @for (experience of myExperience()?.descriptions; track $index ) {
+      <ul>
+        <li> {{ experience }}</li>
+      </ul>
+    }
+    @for (experience of experiences; track experience.__id) {
+      {{ experience.name }}
+    }
   </div>
 </div>
