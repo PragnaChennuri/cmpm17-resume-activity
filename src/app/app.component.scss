@@ -1,9 +1,11 @@
-// Style your resume as you wish but make sure to choose a background color other than white
-// Change the color of any section
-// Change the font size of any section
-.resume-container{
-  img{
-    width: 250px;
-    height: 350px;
+:host {
+  .welcome-tag {
+    max-width: 760px;
+    margin-top: 15px;
+    padding: 1rem 1.4rem;
+    border-radius: 14px;
+    color: #1d2d2c;
+    font-size: 25px;
+    background-color: rgb(223, 255, 196);
   }
 }

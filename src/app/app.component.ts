@@ -9,24 +9,4 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'cmpm17-resume-activity';
-
-  currentUserName: string = 'Jialai';
-
-  currentYear: number = 2026;
-
-  isYearCurrentYear(): boolean {
-    return this.currentYear === 2026;
-  }
-
-  handleClick() {
-    console.log("Button has been clicked!");
-  }
-
-  onKeyPress(event:KeyboardEvent){
-    console.log("Key Pressed: ", event.key);
-  }
-
-  navigateToWebsite(){
-    window.open("https://google.com");
-  }
 }
