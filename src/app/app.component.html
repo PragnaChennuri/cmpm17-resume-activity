@@ -1,31 +1,32 @@
-Welcome!
-<div class="resume-container">
 <!-- Go ahead and add your name -->
-  <h1>Hello {{ currentUserName }} </h1>
-  <div class="greeting-component">
-    Good Morning, it is January {{ currentYear }}
-    @if(currentYear === 2026){
-      <div class="sample-div">Yipee!!!!</div>
+<div class="container">
+  <div class="resume-container">
+    <h1> {{ name }}</h1>
+    <!-- Add a picture of yourself -->
+    <img src="images/jialai.png">
+    <!-- Include leadership positions, skills, or any other sections you
+    would like to add to your online resume-->
+    <h3> Leadership Position </h3>
+    <p> My lovely life</p>
+    <!-- use list element if you are adding multiple things under each section
+    such as Leadership, Skills -->
+    <ul class="skills">
+      @for (skill of skills; track $index) {
+        <li> {{ skill }}</li>
+      }
+    </ul>
+  </div>
+  <div class="working-experience">
+    <h1>Working Experience</h1>
+    <h2 (click)="changeStudent()"> {{ myExperience()?.name }}</h2>
+    <h3> {{ myExperience()?.positionTitle }}, {{ myExperience()?.organization }} </h3>
+    @for (experience of myExperience()?.descriptions; track $index ) {
+      <ul>
+        <li> {{ experience }}</li>
+      </ul>
+    }
+    @for (experience of experiences; track experience.__id) {
+      {{ experience.name }}
     }
   </div>
-<!-- Add a picture of yourself -->
-  <!-- <img src="/images/pp.png"/> -->
-
-<!-- Include leadership positions, skills, or any other sections you
- would like to add to your online resume-->
-  <h3>Leadership Positions</h3>
-<!-- use list element if you are adding multiple things under each section
- such as Leadership, Skills -->
-  <ul>
-    <li>C++</li>
-    <li>Angular</li>
-    <li>TypeScript</li>
-    <li>Python</li>
-    <li>ChatGpt</li>
-  </ul>
-
-  <button (click)="handleClick()">Click here!</button>
-  <input (keypress)="onKeyPress($event)">
-  <button (click)="navigateToWebsite()">Go to Google!</button>
 </div>
-
