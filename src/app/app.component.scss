@@ -8,4 +8,26 @@
     font-size: 25px;
     background-color: rgb(223, 255, 196);
   }
+
+  .container {
+    background-color: bisque;
+
+    h1 {
+      font-size: 62px;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .skill {
+      color: rgba(3, 30, 56, 0.7);
+      background-color: aqua;
+
+      &:hover {
+        color: yellowgreen;
+      }
+    }
+  }
 }
