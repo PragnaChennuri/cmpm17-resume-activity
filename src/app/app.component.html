@@ -1,7 +1,15 @@
 <div class="welcome-tag">Welcome to the Resume Activity Repo!</div>
 <div class="container">
 <!-- Go ahead and add your name -->
-  <h1> Jialai Li</h1>
+  <h1> {{ currentUserName }} </h1>
+  <!-- <h1>{{currentYear}}</h1> -->
+   <!-- @if(currentYear === 2026){
+        <h1>Hooooraaayyyyy</h1>
+   } -->
+
+   @if(isCurrentYear()){
+    <h1>Hi!!!!!</h1>
+   }
 <!-- Add a picture of yourself -->
   <img src="images/me.jpeg"/>
 <!-- Include leadership positions, skills, or any other sections you
@@ -20,4 +28,5 @@
         <li>ChatGPT</li>
     </ul>
   </div>
+  <button (click)="handleClick()">Hey</button>
 </div>
