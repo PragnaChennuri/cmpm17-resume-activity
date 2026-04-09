@@ -18,9 +18,9 @@
   </div>
   <div class="working-experience">
     <h1>Working Experience</h1>
-    <h2 (click)="changeStudent()"> {{ myExperience()?.name }}</h2>
-    <h3> {{ myExperience()?.positionTitle }}, {{ myExperience()?.organization }} </h3>
-    @for (experience of myExperience()?.descriptions; track $index ) {
+    <h2> {{ experiences[0].name }}</h2>
+    <h3> {{ experiences[1].positionTitle }}, {{experiences[2].organization }} </h3>
+    @for (experience of experiences[1].descriptions; track $index ) {
       <ul>
         <li> {{ experience }}</li>
       </ul>

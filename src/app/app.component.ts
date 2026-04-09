@@ -34,19 +34,7 @@ export class AppComponent {
 
   // --------------- COMPUTED DATA -----------------------
 
-  /** Computed signal that store my working experience. */
-  myExperience: Signal<Experience | undefined> = computed(() => {
-    return this.experiences.find (
-      exp => exp.name === this.selectedName()
-    )
-  })
-
   // --------------- EVENT HANDLING ----------------------
-
-  /** Display pragna-psi info when name is clicked .*/
-  changeStudent() {
-    this.selectedName.set('pragna-psi');
-  }
 
   // --------------- OTHER -------------------------------
 
