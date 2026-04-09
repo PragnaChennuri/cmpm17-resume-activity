@@ -8,6 +8,7 @@
   padding-left: 8%;
   display: flex;
   flex-direction: row;
+
   .resume-container {
     width: 500px;
     height: 600px;
@@ -26,12 +27,11 @@
       color: white;
     }
   }
+
   .working-experience {
     height: 100%;
     width: 50%;
     background-color: beige;
   }
-
-  
 }
 
