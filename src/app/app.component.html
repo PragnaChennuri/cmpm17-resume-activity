@@ -1,8 +1,14 @@
-<div class="welcome-tag">Welcome to the Resume Activity Repo!</div>
-<!-- Go ahead and add your name -->
-<!-- Add a picture of yourself -->
-
-<!-- Include leadership positions, skills, or any other sections you
- would like to add to your online resume-->
-<!-- use list element if you are adding multiple things under each section
- such as Leadership, Skills -->
+<div class="container">
+    <h1 class="name">{{userTitle}}</h1>
+    <div class="component1">
+        <img src={{userImageSrc}} alt="Stepan" class="pic">
+    <h2 class="title">{{userTitle}}</h2>
+    <ul>
+        @for (skill of userSkills; track skill) {
+            <li>{{ skill }}</li>
+          } @empty {
+            <li>No items found</li>
+          }
+    </ul>
+    </div>
+</div>

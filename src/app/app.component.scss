@@ -8,4 +8,19 @@
     font-size: 25px;
     background-color: rgb(223, 255, 196);
   }
+  .container{
+    margin: 0 auto;
+    width: 20%;
+    .component1{
+      justify-content: flex;
+      flex-direction: column;
+      align-items: center;
+      .pic{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+    }
+    
+  }
 }
