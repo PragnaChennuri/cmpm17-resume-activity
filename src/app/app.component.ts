@@ -21,4 +21,9 @@ export class AppComponent {
   handleClick(){
     console.log("Button has been clicked");
   }
+
+  // when I type a word on the keyboard and logs the keyboard event and the letter
+  onKeyPressEvent(event: KeyboardEvent){
+    console.log('Key Pressed', event.key);
+  }
 }
