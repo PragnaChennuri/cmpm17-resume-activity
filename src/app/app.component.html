@@ -1,33 +1,53 @@
-<div class="welcome-tag">Welcome to the Resume Activity Repo!</div>
-<div class="container">
-<!-- Go ahead and add your name -->
-  <h1> {{ currentUserName }} </h1>
-  <!-- <h1>{{currentYear}}</h1> -->
-   <!-- @if(currentYear === 2026){
-        <h1>Hooooraaayyyyy</h1>
-   } -->
+<div class="lesson-page">
+  <section class="demo-card">
+    <h1>Margin, Padding, and Border</h1>
+    <div class="box-space" aria-label="Spacing and border demo">
+      <!-- Margin controls the space outside the element's border. -->
+      <div class="margin-group">
+        <p class="label">Margin</p>
+        <div class="frame">
+          <div class="list">
+            <div class="margin-y-item">margin-top: 16px; margin-bottom: 16px;</div>
+            <div class="margin-x-item">margin-left: 24px; margin-right: 24px;</div>
+          </div>
+        </div>
+      </div>
 
-   @if(isCurrentYear()){
-    <h1>Hi!!!!!</h1>
-   }
-<!-- Add a picture of yourself -->
-  <img src="images/me.jpeg"/>
-<!-- Include leadership positions, skills, or any other sections you
- would like to add to your online resume-->
-  <div class="leadership">
-    <h3> CMPM 17 TA</h3>
-    <p> I Love T4G</p>
-  </div>
-<!-- use list element if you are adding multiple things under each section
- such as Leadership, Skills -->
-  <div class="skill">
-    <ul>
-        <li>C++</li>
-        <li>Python</li>
-        <li>TypeScript</li>
-        <li>ChatGPT</li>
-    </ul>
-  </div>
-  <button (click)="handleClick()">Hey</button>
-  <input (keypress)="onKeyPressEvent($event)">
+      <!-- Padding controls the space inside the element, between content and border. -->
+      <div class="padding-group">
+        <p class="label">Padding</p>
+        <div class="frame">
+          <div class="list">
+            <div class="padding-y-item">padding-top: 16px; padding-bottom: 16px;</div>
+            <div class="padding-x-item">padding-left: 24px; padding-right: 24px;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Border shows line width, style, and color around the element. -->
+      <div class="border-group">
+        <p class="label">Border</p>
+        <div class="frame">
+          <div class="list">
+            <div class="border-1-item">1px solid</div>
+            <div class="border-2-item">3px dashed</div>
+            <div class="border-3-item">5px double</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-card">
+    <h1>Flexbox</h1>
+    <div class="flex-demo" aria-label="Flexbox demo">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </section>
 </div>
