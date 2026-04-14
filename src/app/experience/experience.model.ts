@@ -2,11 +2,11 @@ import { Timestamp } from "rxjs";
 
 export interface Experience {
     __id: string;
-    name: number;
+    name: string;
     _startDate?: Date;
     positionTitle: string;
     employmentType: string;
-    organization: Timestamp;
+    organization: string;
     location: string;
     descriptions: string[];
 }

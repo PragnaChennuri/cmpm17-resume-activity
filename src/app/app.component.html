@@ -3,10 +3,11 @@
   <div class="resume-container">
     <h1 (click)="changeName()"> {{ name }}</h1>
     <!-- Add a picture of yourself -->
-    <img src="zzzzz/images/jialai.png">
+    <img src="images/jialai.png">
     <!-- Include leadership positions, skills, or any other sections you
     would like to add to your online resume-->
     <h3> Leadership Position </h3>
+    <p> {{ title }} </p>>
     <p> My lovely life</p>
     <!-- use list element if you are adding multiple things under each section
     such as Leadership, Skills -->
@@ -16,17 +17,17 @@
       }
     </ul>
   </div>
-  // Beginning of my working experience
+  <!-- Beginning of my working experience --> 
   <div class="working-experience">
     <h1>Working Experience</h1>
-    <h2> {{ experiences[0].name }}</h2>
-    <h3> {{ experiences[1].positionTitle }}, {{experiences[8].organization }} </h3>
-    @for (experience of experiences[1].descriptions; track $index ) {
+    <h2> {{ Experience[0].name }}</h2>
+    <h3> {{ Experience[1].positionTitle }}, {{Experience[8].organization }} </h3>
+    @for (experience of Experience[1].descriptions; track $index ) {
       <ul>
         <li> {{ experience }}</li>
       </ul>
     }
-    @for (experience of experiences; track experience.__id) {
+    @for (experience of Experience; track experience.__id) {
       {{ experience.name }}
     }
   </div>

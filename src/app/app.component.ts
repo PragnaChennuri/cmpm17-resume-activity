@@ -18,13 +18,20 @@ export class AppComponent {
   name: string = 'Jialai Li';
 
   /** My skills. */
-  skills: string[] = ['C++', Python, 'Angular', 'ChatGPT'];
+  skills: string[] = ['C++', 'Python', 'Angular', 'ChatGPT'];
 
   /** Working Experience. */
-  experiences: string[] = EXPERIENCES;
+  Experience: Experience[] = EXPERIENCES;
 
   /** Writable signal to manage student state. */
   selectedName: WritableSignal<string>= signal('Jialai');
+
+  /** Resume title. */
+  title: string = 'cmpm17-resume-activity';
+
+
+  /** The description of my leadership. */
+  leadership: string = 'My lovely life';
 
   // --------------- COMPUTED DATA -----------------------
 
@@ -38,13 +45,5 @@ export class AppComponent {
     this.name = 'Psi';
   }
 }
-
-
-
-/** Resume title. */
-title: string = 'cmpm17-resume-activity';
-
-/** The description of my leadership. */
-leadership: string = 'My lovely life';
 
 
