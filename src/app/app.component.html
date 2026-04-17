@@ -1,16 +1,20 @@
 <!-- Go ahead and add your name -->
 <div class="container">
+  <!-- The start of my 2nd container -->
   <div class="resume-container">
-    <h1 (click)="changeName()"> {{ name }}</h1>
+    <h1> {{ name }}</h1>
     <!-- Add a picture of yourself -->
     <img src="images/jialai.png">
     <!-- Include leadership positions, skills, or any other sections you
     would like to add to your online resume-->
     <h3> Leadership Position </h3>
+    <!-- This is my title -->
     <p> {{ title }} </p>>
+    <!-- This is my sub-title -->
     <p> My lovely life</p>
     <!-- use list element if you are adding multiple things under each section
     such as Leadership, Skills -->
+
     <ul class="skills">
       @for (skill of skills; track $index) {
         <li> {{ skill }}</li>
@@ -19,16 +23,18 @@
   </div>
   <!-- Beginning of my working experience --> 
   <div class="working-experience">
-    <h1>Working Experience</h1>
-    <h2> {{ Experience[0].name }}</h2>
-    <h3> {{ Experience[1].positionTitle }}, {{Experience[8].organization }} </h3>
-    @for (experience of Experience[1].descriptions; track $index ) {
+    <h1 (click)="openModal()">Working Experience</h1>
+    <h2> {{ experiences[0].name }}</h2>
+    <h3> {{ experiences[1].positionTitle }}, {{experiences[1].organization }} </h3>
+    @for (experience of experiences[1].descriptions; track $index ) {
       <ul>
         <li> {{ experience }}</li>
       </ul>
     }
-    @for (experience of Experience; track experience.__id) {
+    <!-- Look through the exp -->
+    @for (experience of experiences; track experience.__id) {
       {{ experience.name }}
     }
+    <!-- End of the div -->
   </div>
 </div>

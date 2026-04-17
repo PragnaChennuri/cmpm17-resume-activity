@@ -58,7 +58,7 @@ export const EXPERIENCES: Experience[] = [
    name: 'Pragna',
    positionTitle: 'Student lecturer',
    employmentType: 'Part-time',
-   organization: 'UC Santa Cruz',
+   organization: 'UCxxxxxx Santa Cruz',
    location: 'Santa Cruz, CA',
    descriptions: [
      'Helped students debug',
