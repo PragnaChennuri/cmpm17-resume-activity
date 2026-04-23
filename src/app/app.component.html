@@ -4,12 +4,9 @@
     <h1> {{ name }}</h1>
     <!-- Add a picture of yourself -->
     <img src="images/jialai.png">
-    <!-- Include leadership positions, skills, or any other sections you
-    would like to add to your online resume-->
     <h3> Leadership Position </h3>
     <p> My lovely life</p>
-    <!-- use list element if you are adding multiple things under each section
-    such as Leadership, Skills -->
+    <!-- Leadership, Skills -->
     <ul class="skills">
       @for (skill of skills; track $index) {
         <li> {{ skill }}</li>
@@ -18,15 +15,18 @@
   </div>
   <div class="working-experience">
     <h1>Working Experience</h1>
-    <h2 (click)="changeStudent()"> {{ myExperience()?.name }}</h2>
-    <h3> {{ myExperience()?.positionTitle }}, {{ myExperience()?.organization }} </h3>
-    @for (experience of myExperience()?.descriptions; track $index ) {
+    <!-- The Beginning the user working experince -->
+    @for (experience of experiences; track experience.__id) {
       <ul>
-        <li> {{ experience }}</li>
+        <li>{{ experience.name }}</li>
       </ul>
     }
-    @for (experience of experiences; track experience.__id) {
-      {{ experience.name }}
+    <!-- Current User Name-->
+    <h1>{{ currentName() }}</h1> 
+    @for (experience of cmpm17Student()?.descriptions; track $index) {
+      <ul>
+        <li>{{ experience }}</li>
+      </ul>
     }
   </div>
 </div>

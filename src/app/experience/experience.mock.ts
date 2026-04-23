@@ -15,7 +15,7 @@ export const EXPERIENCES: Experience[] = [
  },
  {
    __id: 'exp2',
-   name: 'pragna-psi',
+   name: 'pppragna-Li',
    _startDate: new Date('2026-01-05'),
    positionTitle: 'Frontend Web Developer',
    employmentType: 'Part-time',

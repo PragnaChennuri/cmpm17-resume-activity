@@ -1,4 +1,4 @@
-import { Component, computed, signal, Signal, WritableSignal} from '@angular/core';
+import { Component, computed, Signal, signal, WritableSignal} from '@angular/core';
 import { Experience } from './experience/experience.model';
 import { EXPERIENCES } from './experience/experience.mock';
 
@@ -26,27 +26,22 @@ export class AppComponent {
   /** My skills. */
   skills: string[] = ['C++', 'Python', 'Angular', 'ChatGPT'];
 
-  /** Working Experience. */
+  /** Working experiences. */
   experiences: Experience[] = EXPERIENCES;
 
-  /** Writable signal to manage student state. */
-  selectedName: WritableSignal<string>= signal('Jialai');
+  /** Current user name. */
+  currentName: WritableSignal<string> = signal('pppragna-Li');
 
   // --------------- COMPUTED DATA -----------------------
 
-  /** Computed signal that store my working experience. */
-  myExperience: Signal<Experience | undefined> = computed(() => {
-    return this.experiences.find (
-      exp => exp.name === this.selectedName()
+  /** Select cmpm17 student info. */
+  cmpm17Student: Signal<Experience|undefined> = computed(() => {
+    return this.experiences.find(
+      exp => exp.name === this.currentName()
     )
   })
 
   // --------------- EVENT HANDLING ----------------------
-
-  /** Display pragna-psi info when name is clicked .*/
-  changeStudent() {
-    this.selectedName.set('pragna-psi');
-  }
 
   // --------------- OTHER -------------------------------
 
