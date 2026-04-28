@@ -111,8 +111,8 @@
   }
 
   .padding-x-item {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .border-1-item,
@@ -124,6 +124,7 @@
   }
 
   .border-1-item {
+    border-left-color: blue;
     border-width: 1px;
     border-style: solid;
     border-color: #c46a15;
@@ -143,11 +144,13 @@
 
   .flex-demo {
     margin-top: 8px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    // align-items: center;
-    // gap: 8px;
+    // lines 148-153
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     padding: 10px;
     border: 1px solid #bcd4f6;
     background: #eaf4ff;
